@@ -1,0 +1,6 @@
+{
+	"port": 8080,
+	"app_name": "My Job App",
+	"toggle": true,
+	"whitelist_url": ["url1", "url2", "url3", "url4"]
+}
