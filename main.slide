@@ -20,7 +20,7 @@ https://github.com/alextanhongpin
 
 # Motivation
 
-- Why learn go over your existing language or nodejs
+- Why learn go over your existing language or nodejs (something you can be prodcutive with)
 - Fast (demo)
 - Can be compiled to a single binary (demo)
 
@@ -39,6 +39,7 @@ Web API
 - Hello world
 - Reading json
 - Writing json
+
 
 
 

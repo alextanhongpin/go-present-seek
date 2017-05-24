@@ -12,17 +12,19 @@ type Book struct {
 }
 
 func main() {
-	http.HandleFunc("/books", getHandler)
+	http.HandleFunc("/books", postHandler)
 	http.ListenAndServe(":8080", nil)
 }
 
-func getHandler(w http.ResponseWriter, r *http.Request) {
+func postHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		var book Book
 		json.NewDecoder(r.Body).Decode(&book)
 
 		fmt.Println(book)
-
-		json.NewEncoder(w).Encode(book)
+		// Do something with book
+	} else if r.Method == "GET" {
+		queries := r.URL.Query()
+		fmt.Println(queries.Get("name"))
 	}
 }
