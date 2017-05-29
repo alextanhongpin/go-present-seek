@@ -9,8 +9,8 @@ import (
 
 type Config struct {
 	Port         int      `json:"port"`
-	AppName      string   `json:"app_name"`
-	Toggle       bool     `json:"toggle"`
+	Version      string   `json:"version"`
+	Debug        bool     `json:"debug"`
 	WhiteListUrl []string `json:"whitelist_url"`
 }
 
@@ -28,6 +28,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("\n%#v", cfg)
+	fmt.Printf("\n%+v\n", cfg)
 
 }

@@ -7,6 +7,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", index)
+	fmt.Println("listening to port *:8080. press ctrl + c to cancel")
 	http.ListenAndServe(":8080", nil)
 }
 

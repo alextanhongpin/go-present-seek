@@ -11,22 +11,30 @@ https://github.com/alextanhongpin
 
 * What's Go
 
-- young language
-- fast (demo)
 - statically typed language
 - garbage-collected
 - can be compliled to a single binary
 - concurrent
 
-# Motivation
+
+* Motivation
 
 - Why learn go over your existing language or nodejs (something you can be prodcutive with)
 - Fast (demo)
 - Can be compiled to a single binary (demo)
+- Statically-typed (allow us to reason)
 
-* Hello Go
+.play static.go
+
+
+* Learn Go
+
+First lesson, printing your output.
 
 .play hello.go
+
+	Go comes with many useful tools. 
+	When in doubt use godoc
 
 * Demo (golang vs nodejs)
 
