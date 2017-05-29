@@ -19,10 +19,11 @@ https://github.com/alextanhongpin
 
 * Motivation
 
-- Why learn go over your existing language or nodejs (something you can be prodcutive with)
+- Why learn go over your existing language or nodejs (something you can be productive with)
 - Fast (demo)
-- Can be compiled to a single binary (demo)
+- Can be compiled to a single binary (cross-platform)
 - Statically-typed (allow us to reason)
+- Concurrent
 
 .play static.go
 
