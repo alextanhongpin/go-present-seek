@@ -6,24 +6,17 @@ import (
 	"time"
 )
 
-func delay100() bool {
-	time.Sleep(1 * time.Second)
-	return true
-}
-
-func delay200() bool {
-	time.Sleep(2 * time.Second)
-	return true
-}
-
 func main() {
 	defer timeTrack(time.Now(), "delay test")
 	c := make(chan bool, 2)
 	go func() {
-		c <- delay100()
+		time.Sleep(time.Second)
+		c <- true
 	}()
+
 	go func() {
-		c <- delay200()
+		time.Sleep(2 * time.Second)
+		c <- true
 	}()
 
 	<-c
