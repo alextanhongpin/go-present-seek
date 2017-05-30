@@ -16,8 +16,8 @@ function delay200 () {
   })
 }
 
-console.time()
+console.time('delay test')
 Promise.all([delay100(), delay200()]).then((data) => {
   console.log(data)
-  console.timeEnd()
+  console.timeEnd('delay test')
 })
