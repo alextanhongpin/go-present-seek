@@ -1,5 +1,5 @@
 Go Workshop
-Introduction to Go
+Building a Web Api with Go
 17 May 2017
 Tags: go, basic
 
@@ -9,83 +9,210 @@ alextan@seekasia.com
 https://github.com/alextanhongpin
 
 
-* Motivation
+* Introduction
 
-- learn the basics of go
-- by writing a web api
-- understand how a go project is structured
-- get a working api
+By the end of today, you will know the following:
+
+- basics of go
+- app structure
+- using third-party packages
+- write a CRUD api with mysql
 
 
 * What's Golang
 
-- developed by Google in 2007
-- made public in 2009
-- C-like language
+- developed by Google in 2007, made public in 2009
+- c-like language
 - statically-typed language
 - garbage-collected
 - compile to a single binary
 - concurrent with goroutines
 
+: In computer science, garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program
+
+* Version
+
+
+- Go 1.8 was released on February 16th.
+
+.image assets/flying.png
 
 * Why Golang
 
-The good stuff
+* Why Golang
 
-- Fast
-- Compile to a single binary
-- Statically-typed 
-- Concurrent
+Some reasons to pick go...
 
-: Why learn Go over other existing language (like nodejs, something you are alraedy productive with)
-: Single binary means ease of deployment, convdnient
-: concurrent doing many things at 
+- it is (very) fast
 
-* Statically typed
+  golang: Req/Sec    2.09k
+  
+  nodejs: Req/Sec   342.98
 
-allow us to reason
 
-.play static/static.go
+* Why Golang
+- compiles to a single binary
+  $ go build .
+- ...produces an executable that is cross-platform
+- makes deployment easy
+
+
+* Why Golang
+- statically-typed language allows us to reason
+
+.play -edit static/static.go
+
+* Why Golang
+
+- concurrent
+
+
+  Concurrency is about dealing with lots of things at once. 
+  
+  Parallelism is about doing lots of things at once. 
+
+  - Rob Pike (one of the creator of Go)
 
 
 * Learn Go
 
 First lesson, printing your output.
 
-.play hello.go
+.play -edit hello.go
 
-	Go comes with many useful tools. 
-	When in doubt use godoc
+: every go source file starts with a package clause
 
-* Demo (golang vs nodejs)
-
-wrk http benchmarking tool to benchmark the golang vs nodejs express
-returning hello world
 
 * Building a web api
 
-GET api/jobs - get a list of job
-GET api/jobs/:id - get a job by id
-POST api/jobs - create a job
-DELETE api/jobs/:id - delete a job
-PUT api/jobs/:id - update a job
+Job CRUD API
 
+- *GET* api/jobs - get a list of job
+- *GET* api/jobs/:id - get a job by id
+- *POST* api/jobs - create a job
+- *DELETE* api/jobs/:id - delete a job
+- *PUT* api/jobs/:id - update a job
+
+: let's see how it works first
 
 * Web API
 
-Structure
+What do we need?
 
-- Hello world
-- Read Config
+- Reading Config
 - Setting up database
 - Reading/Writing json
-- Router
+- Setting up router
 
-* Work in groups of four
+* Dependencies
+
+Get your editor ready!
+
+Check if *go* is installed
+
+  $ go version
+
+
+Install the following dependencies:
+
+  $ go get github.com/julienschmidt/httprouter
+
+  $ go get github.com/go-sql-driver/mysql
+
+* Path 
+
+Test your go path
+
+  $ echo $GOPATH
+
+Go to your workdir
+
+  $ cd $GOPATH/src/github.com/yourusername/
+
+Create a folder
+  
+  $ mkdir go-simple-api
+
+
+* A Simple Server
+
+.play -edit section/01-simple-server.go
+
+* Using flags
+
+Use go flags over environment variables - it provides a sane default
+
+.play -edit section/02-config.go /START OMIT/,/END OMIT/
+
+* Load config from file
+
+JSON, YML, TOML, ...
+
+.play -edit section/03-open-file.go /package/,/func/
+
+* 
+
+Create a function to read the config file, and returns it
+.play -edit section/03-open-file.go /func set/,
+
+* 
+
+Calling config at our main function
+
+.play -edit section/03-open-file.go /func main/,/func set/
+
+* Setting up database
+
+Create a database called *gotest* with the following table
+
+  CREATE TABLE IF NOT EXISTS job (
+    id INT NOT NULL AUTO_INCREMENT,
+    name TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+  );
+
+* Connecting to database
+
+.play -edit section/04-setup-database.go /package/,/func/
+
+* Create a function to setup our database
+
+.play -edit section/04-setup-database.go /func setu/,
+
+* How to call our database from our main function
+.play -edit section/04-setup-database.go /func mai/,/func se/
+
+
+* Query rows
+
+.play -edit section/05-fetch-many.go /func getJobsHandler/,/var jobs /
+
+* Scan each rows
+
+.play -edit section/05-fetch-many.go /var jobs /,
+
+
+* Complete the remaining routes
+
+.play -edit section/06-routes.go
 
 
 
-This is another example of ath go code
+* Materials
 
-* Slide 4
+Source:
 
+  https://github.com/alextanhongpin/go-rest-api
+
+Talk: 
+  
+  https://go-talks.appspot.com/github.com/alextanhongpin/go-present/main.slide#1
+
+* The End
+
+Thanks for staying till the end! Hope you guys enjoy the talk!
+
+Feedbacks and suggestions are always appreciated.
+
+.image assets/flying.png
