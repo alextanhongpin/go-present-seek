@@ -1,15 +1,16 @@
 # golang workshop
 
+Link to [presentation](https://go-talks.appspot.com/github.com/alextanhongpin/go-present/main.slide#1)
+
 - Work in pairs, learn the basics of golang and build a web api
 - Packaging, building the app
 - Syntax and best practices
 
 ## Tools required for the workshop
 
-
-mysql - https://dev.mysql.com/downloads/mysql/
-golang - https://nats.io/documentation/tutorials/go-install/
-an ide - SublimeText, VisualStudioCode or Atom will do. You can also install the go ide
+- mysql - https://dev.mysql.com/downloads/mysql/
+- golang - https://nats.io/documentation/tutorials/go-install/
+- an text editor - SublimeText, VisualStudioCode or Atom will do.
 
 
 ## IDE Setup
@@ -43,16 +44,17 @@ https://www.pantz.org/software/mysql/mysqlcommands.html
 
 ## Useful go packages
 
-go get -u golang.org/x/tools/cmd/goimports
-go get -u golang.org/x/tools/cmd/vet
-go get -u golang.org/x/tools/cmd/oracle
-go get -u golang.org/x/tools/cmd/godoc
-
+```bash
+$ go get -u golang.org/x/tools/cmd/goimports
+$ go get -u golang.org/x/tools/cmd/vet
+$ go get -u golang.org/x/tools/cmd/oracle
+$ go get -u golang.org/x/tools/cmd/godoc
+```
 
 Command goimports updates your Go import lines, adding missing ones and removing unreferenced ones.
-
-
--- go build
--- go run main.go
--- go test
--- go benchmark
+```bash
+$ go build
+$ go run main.go
+$ go test
+$ go benchmark
+```
