@@ -11,24 +11,29 @@ https://github.com/alextanhongpin
 
 * Motivation
 
-- Hands-on workshop
-- Write go
-- Take away: understanding how a go program is structured and a working web api
+- learn the basics of go
+- by writing a web api
+- understand how a go project is structured
+- get a working api
 
-* What's Go
 
-- statically typed language
+* What's Golang
+
+- developed by Google in 2007
+- made public in 2009
+- C-like language
+- statically-typed language
 - garbage-collected
-- can be compliled to a single binary
-- concurrent
+- compile to a single binary
+- concurrent with goroutines
 
 
-* Why go
+* Why Golang
 
 The good stuff
 
 - Fast
-- Can be compiled to a single binary
+- Compile to a single binary
 - Statically-typed 
 - Concurrent
 
