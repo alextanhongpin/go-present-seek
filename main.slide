@@ -9,6 +9,12 @@ alextan@seekasia.com
 https://github.com/alextanhongpin
 
 
+* Motivation
+
+- Hands-on workshop
+- Write go
+- Take away: understanding how a go program is structured and a working web api
+
 * What's Go
 
 - statically typed language
@@ -51,15 +57,26 @@ First lesson, printing your output.
 wrk http benchmarking tool to benchmark the golang vs nodejs express
 returning hello world
 
-* Themes
+* Building a web api
 
-Web API
+GET api/jobs - get a list of job
+GET api/jobs/:id - get a job by id
+POST api/jobs - create a job
+DELETE api/jobs/:id - delete a job
+PUT api/jobs/:id - update a job
+
+
+* Web API
+
+Structure
+
 - Hello world
 - Read Config
 - Setting up database
 - Reading/Writing json
 - Router
 
+* Work in groups of four
 
 
 
