@@ -17,15 +17,24 @@ https://github.com/alextanhongpin
 - concurrent
 
 
-* Motivation
+* Why go
 
-- Why learn go over your existing language or nodejs (something you can be productive with)
-- Fast (demo)
-- Can be compiled to a single binary (cross-platform)
-- Statically-typed (allow us to reason)
+The good stuff
+
+- Fast
+- Can be compiled to a single binary
+- Statically-typed 
 - Concurrent
 
-.play static.go
+: Why learn Go over other existing language (like nodejs, something you are alraedy productive with)
+: Single binary means ease of deployment, convdnient
+: concurrent doing many things at 
+
+* Statically typed
+
+allow us to reason
+
+.play static/static.go
 
 
 * Learn Go
@@ -46,8 +55,10 @@ returning hello world
 
 Web API
 - Hello world
-- Reading json
-- Writing json
+- Read Config
+- Setting up database
+- Reading/Writing json
+- Router
 
 
 
