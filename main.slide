@@ -45,9 +45,16 @@ Some reasons to pick go...
 
 - it is (very) fast
 
-  golang: Req/Sec    2.09k
-  
-  nodejs: Req/Sec   342.98
+  |---------------------------------|
+  | language | req/s  | avg latency |
+  |----------|--------|-------------|
+  | go       | 5.57k  | 2.24ms      |
+  | node     | 724.65 | 13.88ms     |
+  | express  | 541.46 | 18.60ms     |
+  | python   | 26.99  | 632.38ms    |
+  |---------------------------------|
+
+
 
 
 * Why Golang
