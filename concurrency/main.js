@@ -1,6 +1,6 @@
 // This program test nodejs concurrency with promises
 
-function delay100 () {
+function delay1000 () {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(true)
@@ -8,7 +8,7 @@ function delay100 () {
   })
 }
 
-function delay200 () {
+function delay2000 () {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(true)
@@ -17,7 +17,7 @@ function delay200 () {
 }
 
 console.time('delay test')
-Promise.all([delay100(), delay200()]).then((data) => {
+Promise.all([delay1000(), delay2000()]).then((data) => {
   console.log(data)
   console.timeEnd('delay test')
 })

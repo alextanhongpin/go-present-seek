@@ -8,6 +8,7 @@ import (
 
 func main() {
 	defer timeTrack(time.Now(), "delay test")
+
 	c := make(chan bool, 2)
 	go func() {
 		// Delay by one second

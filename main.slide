@@ -48,7 +48,7 @@ Some reasons to pick go...
   |---------------------------------|
   | language | req/s  | avg latency |
   |----------|--------|-------------|
-  | go       | 5.57k  | 2.24ms      |
+  | go       |        |             |
   | node     | 724.65 | 13.88ms     |
   | express  | 541.46 | 18.60ms     |
   | python   | 26.99  | 632.38ms    |
